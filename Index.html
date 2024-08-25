@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definindo a codificação de caracteres para o documento -->
+    <meta charset="UTF-8">
+    <!-- Configurando o documento para ser responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparecerá na aba do navegador -->
+    <title>Decodificador de Texto</title>
+    <!-- Linkando o arquivo CSS externo para a estilização da página -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Canvases para os efeitos Matrix -->
+    <canvas id="matrixLeft"></canvas>
+    <canvas id="matrixRight"></canvas>
+
+    <!-- Contêiner principal que envolve todo o conteúdo da página -->
+    <div id="main-container">
+        <!-- Contêiner específico para o conteúdo central -->
+        <div id="content">
+            <!-- Título principal da página -->
+            <h1>Decodificador de Texto</h1>
+            <!-- Descrição breve do projeto -->
+            <p>Projeto ONE Fase Seleção T7.</p>
+            
+            <!-- Formulário para decodificar o texto -->
+            <form id="decodificador-form">
+                <!-- Contêiner para agrupar os campos de input -->
+                <div class="containerInput">
+                    <!-- Campo de entrada para o texto a ser criptografado/descriptografado -->
+                    <input type="text" id="palavra" name="palavra" placeholder="Digite o texto Aqui">
+                    <!-- Área de texto para mostrar o resultado do processamento, definida como somente leitura -->
+                    <textarea id="resultado" name="resultado" rows="4" cols="50" readonly></textarea>
+                </div>
+                
+                <!-- Botão para criptografar o texto inserido -->
+                <button type="button" name="acao" value="criptografar" onclick="processarTexto('criptografar')">Criptografar</button>
+                <!-- Botão para descriptografar o texto inserido -->
+                <button type="button" name="acao" value="descriptografar" onclick="processarTexto('descriptografar')">Descriptografar</button>
+                <!-- Botão para copiar o texto resultante para a área de transferência -->
+                <button type="button" onclick="copiarTexto()">Copiar</button>
+            </form>
+
+            <!-- Rodapé com informações de contato e crédito -->
+            <footer>
+                <!-- Nome do desenvolvedor -->
+                <p>Desenvolvido por Saulo Cesar Demonte</p>
+                <!-- E-mail de contato -->
+                <p>E-mail: saulo.demonte@terra.com.br</p>
+                <!-- Link para contato via WhatsApp, com ícone e número de telefone -->
+                <p>
+                    <a href="https://wa.me/5519988389289">
+                        <img src="/img/whatsapp-icon.png" alt="WhatsApp">
+                    </a>
+                    19 9 8838-9289
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Importando o script JavaScript para processar as funcionalidades do decodificador -->
+    <script src="unifiedScript.js"></script>
+    
+</body>
+</html>

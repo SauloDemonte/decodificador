@@ -1,0 +1,155 @@
+/* Estilização de botões */
+button {
+    background-color: #0A3871; /* Define a cor de fundo do botão */
+    border-radius: 30px; /* Define bordas arredondadas */
+    transition: background-color 0.5s, box-shadow 0.5s; /* Adiciona transição suave para mudanças de cor de fundo e sombra */
+    cursor: pointer; /* Muda o cursor para indicar que é um botão clicável */
+    box-shadow: 5px 5px 10px #888888; /* Adiciona uma sombra ao botão */
+    filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5)); /* Adiciona uma sombra de queda para um efeito 3D */
+    color: #FFFFFF; /* Define a cor do texto dentro do botão */
+    border: none; /* Remove qualquer borda padrão */
+    padding: 10px 10px; /* Define o preenchimento interno do botão */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    max-width: 150px; /* Limita a largura máxima do botão */
+    height: 40px; /* Define a altura do botão */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do botão */
+}
+
+/* Foco para acessibilidade */
+button:focus {
+    outline: 2px solid #FFFFFF; /* Adiciona uma borda branca ao redor do botão quando ele está focado */
+    outline-offset: 4px; /* Define a distância entre a borda e o botão */
+}
+
+/* Estilização do rodapé */
+footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+    margin-top: auto; /* Faz o rodapé ficar no final da página */
+    font-size: 14px; /* Define o tamanho da fonte do rodapé */
+    color: #AAAAAA; /* Define a cor do texto para melhorar a legibilidade */
+    line-height: 1; /* Remove o espaçamento extra entre as linhas */
+    padding-bottom: 10px; /* Adiciona um pequeno padding no fundo para distanciamento do final da página */
+}
+
+/* Estilização do ícone do WhatsApp */
+.whatsapp-icon img {
+    width: 24px; /* Define a largura do ícone */
+    height: 24px; /* Define a altura do ícone */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para a transformação */
+    display: inline-block; /* Garante que o ícone seja tratado como um bloco inline */
+    object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorção */
+}
+
+/* Animação de "pulse" ao passar o mouse */
+.whatsapp-icon img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+    animation: pulse 1s infinite; /* Inicia a animação de pulsação */
+}
+
+/* Animação de "pulse" */
+@keyframes pulse {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Estilização do corpo da página */
+body {
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o padding padrão */
+    overflow: hidden; /* Esconde a barra de rolagem */
+    background-color: black; /* Define a cor de fundo da página */
+    display: flex; /* Define um layout flexível */
+    flex-direction: column; /* Configura para empilhar elementos verticalmente */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+}
+
+/* Estilização dos canvases */
+canvas {
+    position: fixed; /* Posiciona os canvases de forma fixa na tela */
+    top: 0; /* Alinha os canvases ao topo da página */
+    width: 200px; /* Define a largura dos canvases */
+    height: 100%; /* Define a altura dos canvases como 100% da altura da janela */
+}
+
+/* Estilização para o canvas à esquerda */
+#matrixLeft {
+    left: 0; /* Posiciona o canvas no lado esquerdo da tela */
+}
+
+/* Estilização para o canvas à direita */
+#matrixRight {
+    right: 0; /* Posiciona o canvas no lado direito da tela */
+}
+
+/* Contêiner principal */
+#main-container {
+    margin-left: 200px; /* Adiciona uma margem à esquerda para afastar do canvas */
+    margin-right: 200px; /* Adiciona uma margem à direita para afastar do canvas */
+    flex: 1; /* Faz o contêiner principal crescer para ocupar o espaço disponível */
+    display: flex; /* Define um layout flexível */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-image: url('img/background.jpg'); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+}
+
+/* Estilização do conteúdo */
+#content {
+    color: white; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(0, 0, 0, 0.8); /* Define um fundo semi-transparente */
+    padding: 20px; /* Adiciona um padding interno ao conteúdo */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao contêiner */
+    max-width: 800px; /* Define a largura máxima do contêiner */
+}
+
+/* Contêiner de inputs */
+.containerInput {
+    display: flex; /* Define um layout flexível */
+    flex-direction: column; /* Alinha os inputs em coluna */
+    gap: 10px; /* Adiciona um espaço entre os inputs */
+    align-items: center; /* Centraliza os inputs horizontalmente */
+    margin-bottom: 50px; /* Adiciona um espaço abaixo dos inputs */
+}
+
+/* Estilização de inputs e textarea */
+input[type="text"],
+textarea {
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    max-width: 400px; /* Define a largura máxima dos inputs */
+    height: 100px; /* Define a altura dos inputs */
+    padding: 10px; /* Adiciona um padding interno */
+    border: 1px solid #CCCCCC; /* Define a cor e espessura da borda */
+    border-radius: 20px; /* Adiciona bordas arredondadas aos inputs */
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+    font-size: 20px; /* Define o tamanho da fonte */
+    line-height: 1.5; /* Ajusta a altura da linha para melhorar a legibilidade */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #main-container {
+        margin-left: 0; /* Remove as margens laterais em telas menores */
+        margin-right: 0;
+    }
+    
+    button {
+        width: 80%; /* Define a largura do botão como 80% do contêiner pai */
+        max-width: none; /* Remove a largura máxima em telas menores */
+    }
+
+    input[type="text"], textarea {
+        max-width: 100%; /* Permite que os inputs ocupem toda a largura disponível */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+}

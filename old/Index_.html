@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Canvases para os efeitos Matrix -->
+    <canvas id="matrixLeft"></canvas>
+    <canvas id="matrixRight"></canvas>
+
+    <!-- Contêiner do conteúdo principal -->
+    <div id="main-container">
+        <div id="content">
+            <h1>Seu Conteúdo Aqui</h1>
+            <p>Conteúdo da página principal.</p>
+            
+            <form id="decodificador-form">
+                <!-- Contêiner para os campos de input -->
+                <div class="containerInput">
+                    <input type="text" id="palavra" name="palavra" placeholder="Digite o texto Aqui">
+                    <textarea id="resultado" name="resultado" rows="4" cols="50" readonly></textarea>
+                </div>
+                
+                <button type="button" name="acao" value="criptografar" onclick="processarTexto('criptografar')">Criptografar</button>
+                <button type="button" name="acao" value="descriptografar" onclick="processarTexto('descriptografar')">Descriptografar</button>
+                <button type="button" onclick="copiarTexto()">Copiar</button>
+            </form>
+
+            <footer>
+                <p>Desenvolvido por Saulo Cesar Demonte</p>
+                <p>E-mail: saulo.demonte@terra.com.br</p>
+                <p>
+                    <a href="https://wa.me/5519988389289">
+                        <img src="caminho_para_seu_icone_whatsapp.png" alt="WhatsApp">
+                    </a>
+                    19 9 8838-9289
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="script.js"></script>
+    <script src="matrix.js"></script>
+</body>
+</html>
