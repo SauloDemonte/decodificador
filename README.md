@@ -39,4 +39,4 @@ canvas: Configura os elementos de canvas usados para o efeito Matrix, fixando-os
 input[type="text"], textarea: Estiliza os campos de texto e textarea, incluindo bordas arredondadas, padding, e tamanho da fonte.
 @media (max-width: 768px): Adapta o layout para telas menores, ajustando margens, larguras e alturas dos elementos.
 
-Link para o Vercel: 
+Link para o Netlify: https://sparkling-biscotti-2ad8c9.netlify.app/ 
